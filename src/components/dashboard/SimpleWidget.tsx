@@ -1,5 +1,13 @@
 import { IoCafeOutline } from "react-icons/io5"
 
+interface Props {
+  title: string;
+  subtitle: string;
+  label?: string;
+  icon?: React.ReactNode;
+  href?: string;
+}
+
 export const SimpleWidget = () => {
   return (
     <div className="bg-white shadow-xl p-3 sm:min-w-[25%] min-w-full  rounded-2xl border-1 border-gray-50 mx-2 my-2">
