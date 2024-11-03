@@ -7,16 +7,16 @@ import { IoHeadsetOutline } from "react-icons/io5";
 
 export const FavoritePokemons = () => {
 
-    const favoritePokemons = useAppSelector( state => Object.values(state.pokemnos) );
-    const [ pokemons, setPokemons ] = useState( favoritePokemons );
+    const favoritePokemons = useAppSelector( state => Object.values(state.pokemnos.favorites) );
+    //const [ pokemons, setPokemons ] = useState( favoritePokemons );
 
   return (
     <>
     {/*<PokemonGrid pokemons={ favoritePokemons } /> */}
     {
-        pokemons.length === 0
+        favoritePokemons.length === 0
           ? ( <NoFavorite /> )
-          : (<PokemonGrid pokemons={ pokemons } /> )
+          : (<PokemonGrid pokemons={ favoritePokemons } /> )
     }
     </>
     
